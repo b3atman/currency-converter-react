@@ -1,0 +1,5 @@
+.container {
+    flex-basis: 600px;
+    padding: 10px 20px;
+    margin: 0 auto;
+}

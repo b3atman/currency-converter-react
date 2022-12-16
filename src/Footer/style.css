@@ -1,0 +1,14 @@
+.footer {
+    font-style: italic;
+    color: black;
+    background-color: rgb(161, 188, 248);
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px 20px;
+    box-shadow: 1px 1px 5px rgb(112, 111, 111);
+}
+  
+.footer__item {
+    list-style-type: none;
+    padding: 3px 0;
+}
