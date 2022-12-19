@@ -19,7 +19,7 @@
 }
 
 .form__button {
-    width: 100%;
+    width: 70%;
     background-color: hsl(218, 98%, 49%);
     color: white;
     padding: 5px;
@@ -35,13 +35,35 @@
     background-color:  hsl(218, 87%, 65%);
 }
 
-.form__header {
-    color: hsl(218, 98%, 49%);
+.form__fieldset {
+    background-color: rgb(161, 188, 248);
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px 0;
+    box-shadow: 1px 1px 5px rgb(112, 111, 111);
     text-align: center;
 }
 
-.form__info {
-    font-size: 14px;
-    text-align: center;
+.form__legend {
+    background-color: hsl(218, 98%, 49%);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+.form__footer {
+    font-style: italic;
     color: black;
+    background-color: rgb(161, 188, 248);
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px 20px;
+    box-shadow: 1px 1px 5px rgb(112, 111, 111);
+}
+  
+.form__footer--item {
+    list-style-type: none;
+    padding: 3px 0;
 }
