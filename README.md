@@ -24,8 +24,7 @@ My own currency converter, in which we can check how much we will receive Euro /
 - React
 - BEM convention
 - Normalize.css
-
-# Getting Started with Create React App
+- Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
