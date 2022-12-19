@@ -6,7 +6,7 @@ html {
   box-sizing: inherit;
 }
 
-body {
+#root {
   font-family: 'Roboto', sans-serif;
   background-color: rgb(221, 218, 218);
   background-image: url("../public/cash.jpg");
