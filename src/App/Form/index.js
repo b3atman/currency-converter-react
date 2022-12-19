@@ -14,57 +14,65 @@ export const Form = ({ calculateResult, result }) => {
 
   return (
     <form className="form" onSubmit={onSubmit}>
-      <h1 className="form__header">
-        Kalkulator walut
-      </h1>
-      <p>
-        *Pola wymagane
+      <fieldset className="form__fieldset">
+        <legend className="form__legend">
+          Kalkulator walut
+        </legend>
+        <p>
+          *Pola wymagane
+        </p>
+        <p>
+          <label>
+            <span className="form__labelText">
+              Kwota w PLN*:
+            </span>
+            <input
+              value={amount}
+              onChange={({ target }) => setAmount(target.value)}
+              placeholder="Wpisz kwotę w PLN"
+              className="form__field"
+              type="number"
+              autoFocus
+              required
+              step="0.01"
+            />
+          </label>
+        </p>
+        <p>
+          <label>
+            <span className="form__labelText">
+              Waluta*:
+            </span>
+            <select
+              className="form__field"
+              value={currency}
+              onChange={({ target }) => setCurrency(target.value)}
+            >
+              {currencies.map((currency => (
+                <option
+                  key={currency.short}
+                  value={currency.short}
+                >
+                  {currency.name}
+                </option>
+              )))}
+            </select>
+          </label>
+        </p>
+        <p>
+          <button className="form__button">Przelicz</button>
+        </p>
+        <Result result={result} />
+      </fieldset>
+      <p className="form__footer">
+        Kursy walut według średniego kursu NBP z dnia 19.12.2022
+        <ul>
+          <li class="form__footer--item">EUR - 4,6886</li>
+          <li class="form__footer--item">USD - 4,4153</li>
+          <li class="form__footer--item">GBP - 5,3926</li>
+          <li class="form__footer--item">CHF - 4,7453</li>
+        </ul>
       </p>
-      <p>
-        <label>
-          <span className="form__labelText">
-            Kwota w PLN*:
-          </span>
-          <input
-            value={amount}
-            onChange={({ target }) => setAmount(target.value)}
-            placeholder="Wpisz kwotę w PLN"
-            className="form__field"
-            type="number"
-            required
-            step="0.01"
-          />
-        </label>
-      </p>
-      <p>
-        <label>
-          <span className="form__labelText">
-            Waluta*:
-          </span>
-          <select
-            className="form__field"
-            value={currency}
-            onChange={({ target }) => setCurrency(target.value)}
-          >
-            {currencies.map((currency => (
-              <option
-                key={currency.short}
-                value={currency.short}
-              >
-                {currency.name}
-              </option>
-            )))}
-          </select>
-        </label>
-      </p>
-      <p>
-        <button className="form__button">Przelicz</button>
-      </p>
-
-      <p className="form__info">
-        Kursy walut według średniego kursu NBP z dnia 3.11.2022
-      </p>
-      <Result result={result} />
-    </form >
+    </form>
   );
 };
