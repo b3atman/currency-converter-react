@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { currencies } from "../currencies";
 import { Result } from "./Result";
 import "./style.css";
@@ -9,6 +9,7 @@ export const Form = ({ calculateResult, result }) => {
 
   const onSubmit = (event) => {
     event.preventDefault();
+
     calculateResult(currency, amount);
   }
 
