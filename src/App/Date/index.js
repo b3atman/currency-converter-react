@@ -31,5 +31,3 @@ export const Date = () => {
         </div>
     );
 };
-
-export default Date;
