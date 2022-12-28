@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { currencies } from "../currencies";
 import { Result } from "./Result";
+import { Timer } from "../Timer";
 import "./style.css";
 
 export const Form = ({ calculateResult, result }) => {
@@ -19,6 +20,7 @@ export const Form = ({ calculateResult, result }) => {
         <legend className="form__legend">
           Kalkulator walut
         </legend>
+        <Timer />
         <p>
           *Pola wymagane
         </p>
