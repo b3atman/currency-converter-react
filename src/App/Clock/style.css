@@ -1,0 +1,6 @@
+.clock {
+    text-align: right;
+    justify-self: flex-end;
+    font-family: "Roboto", monospace;
+    color: hsl(218, 98%, 29%);
+}
