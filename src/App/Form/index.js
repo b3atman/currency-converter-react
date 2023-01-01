@@ -2,7 +2,15 @@ import { useState } from "react";
 import { currencies } from "../currencies";
 import { Result } from "./Result";
 import { Clock } from "../Clock";
-import "./style.css";
+import { 
+  LabelText,
+  Field,
+  Button,
+  Fieldset,
+  Legend,
+  Footer,
+  Item,
+} from "./styled";
 
 export const Form = ({ calculateResult, result }) => {
   const [currency, setCurrency] = useState(currencies[0].short);
@@ -15,25 +23,24 @@ export const Form = ({ calculateResult, result }) => {
   }
 
   return (
-    <form className="form" onSubmit={onSubmit}>
-      <fieldset className="form__fieldset">
-        <legend className="form__legend">
+    <form onSubmit={onSubmit}>
+      <Fieldset>
+        <Legend>
           Kalkulator walut
-        </legend>
+        </Legend>
         <Clock />
         <p>
           *Pola wymagane
         </p>
         <p>
           <label>
-            <span className="form__labelText">
+            <LabelText>
               Kwota w PLN*:
-            </span>
-            <input
+            </LabelText>
+            <Field
               value={amount}
               onChange={({ target }) => setAmount(target.value)}
               placeholder="Wpisz kwotę w PLN"
-              className="form__field"
               type="number"
               autoFocus
               required
@@ -43,11 +50,11 @@ export const Form = ({ calculateResult, result }) => {
         </p>
         <p>
           <label>
-            <span className="form__labelText">
+            <LabelText>
               Waluta*:
-            </span>
-            <select
-              className="form__field"
+            </LabelText>
+            <Field
+              as="select"
               value={currency}
               onChange={({ target }) => setCurrency(target.value)}
             >
@@ -59,23 +66,23 @@ export const Form = ({ calculateResult, result }) => {
                   {currency.name}
                 </option>
               )))}
-            </select>
+            </Field>
           </label>
         </p>
         <p>
-          <button className="form__button">Przelicz</button>
+          <Button>Przelicz</Button>
         </p>
         <Result result={result} />
-      </fieldset>
-      <p className="form__footer">
+      </Fieldset>
+      <Footer>
         Kursy walut według średniego kursu NBP z dnia 19.12.2022
         <ul>
-          <li class="form__footer--item">EUR - 4,6886</li>
-          <li class="form__footer--item">USD - 4,4153</li>
-          <li class="form__footer--item">GBP - 5,3926</li>
-          <li class="form__footer--item">CHF - 4,7453</li>
+          <Item>EUR - 4,6886</Item>
+          <Item>USD - 4,4153</Item>
+          <Item>GBP - 5,3926</Item>
+          <Item>CHF - 4,7453</Item>
         </ul>
-      </p>
+      </Footer>
     </form>
   );
 };
