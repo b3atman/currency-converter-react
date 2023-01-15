@@ -8,5 +8,6 @@ export const theme = {
       jordyBlue: "#A1BCF8",
       black: "#000",
       doveGray: "#706F6F",
+      crimson: "DC143C",
     },
 };
