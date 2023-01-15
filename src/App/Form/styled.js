@@ -55,7 +55,7 @@ export const Legend = styled.legend`
     border: 2px solid ${({ theme }) => theme.color.black};
 `;
 
-export const Footer = styled.p`
+export const Info = styled.p`
     font-style: italic;
     color: ${({ theme }) => theme.color.black};
     background-color: ${({ theme }) => theme.color.jordyBlue};
@@ -65,7 +65,10 @@ export const Footer = styled.p`
     box-shadow: 1px 1px 5px ${({ theme }) => theme.color.doveGray};
 `;
 
-export const Item = styled.li`
-    list-style-type: none;
-    padding: 3px 0;
+export const Loading = styled.p`
+    color: ${({ theme }) => theme.color.black};
+`;
+
+export const Failure = styled.p`
+    color: ${({ theme }) => theme.color.crimson};
 `;
