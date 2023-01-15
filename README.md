@@ -15,7 +15,7 @@ My own currency converter, in which we can check how much we will receive Euro /
 1. Write your amount in PLN.
 2. Choose currency from the list.
 3. Press "Przelicz" button.
-4. "Wynik" is the result.
+4. Here it is - your result!
 
 ## Technologies
 - HTML
@@ -27,6 +27,7 @@ My own currency converter, in which we can check how much we will receive Euro /
 - Create React App
 - Hooks
 - Styled Components
+- Fetch, Async, Await
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
