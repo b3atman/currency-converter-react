@@ -8,7 +8,7 @@ export const useRatesData = () => {
   useEffect(() => {
     const fetchRates = async () => {
       try {
-        const response = await fetch("https://api.exchangerate.host/latest?base=PLN&symbols=EUR,USD,GBP,CHF")
+        const response = await fetch("https://api.exchangerate.host/latest?base=PLN&symbols=EUR,USD,GBP,CHF");
 
         if (!response.ok) {
           throw new Error(response.statusText);
